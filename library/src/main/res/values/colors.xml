@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="colorblack">#000000</color>
+    <color name="colorgreen">#83D500</color>
+    <color name="coloraqua">#12BDD8</color>
+    <color name="colorpink">#D91457</color>
+    <color name="colorsaffron">#FF6A18</color>
+    <color name="colorcyn">#C480F9</color>
+    <color name="colorlightpink">#FFEBF1</color>
+    <color name="colorlightgray">#e9e9e9</color>
+    <color name="colorgray">#939393</color>
+    <color name="colordarkgray">#8E8E8E</color>
+    <color name="coloryellow">#FFB233</color>
+    <color name="colortp">#cccccc</color>
+    <color name="colorred">#FF5351</color>
+    <color name="colorlightgreen">#00CB71</color>
+    <color name="colorblue">#3AA9F1</color>
+    <color name="black_opacity">#33000000</color> <!-- 20% opacity-->
+    <color name="black_high_opacity">#E6000000</color> <!-- 90% opacity-->
+    <color name="white_alpha">#0AFFFFFF</color>
+    <!-- Seekbar colors -->
+    <color name="seekRed">#FFFF0000</color>
+    <color name="seekGreen">#FF00FF00</color>
+    <color name="seekBlue">#FF0000FF</color>
+    <color name="dark_gray">#3D3D3D</color>
+    <color name="thumb_background_color">#00ff00</color>
+    <color name="zomato_red">#a40100</color>
+    <color name="placeholder_background">#222322</color>
+    <color name="top_bottom_header_color">#9de1e1e1</color>
+
+    <color name="top_color">#FFFDF9</color>
+    <color name="comment_red">#FF4E50</color>
+    <color name="audition_yellow">#FFC800</color>
+    <color name="colorOverlay">#78ffffff</color>
+    <color name="popup_back_color">#FDFDFB</color>
+
+    <color name="gray_color_commeent_profile">#A2A2A2</color>
+</resources>

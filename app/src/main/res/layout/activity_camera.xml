@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorblack">
+
+    <com.editing.canvas.library.views.AutoFitTextureView
+        android:id="@+id/textureview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/relativeCameraOptionsView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp">
+
+        <FrameLayout
+            android:id="@+id/frameCaptureIcons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/captureCircle"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:onClick="onCaptureClick"
+                android:src="@drawable/capture" />
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/imgflash"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/frameCaptureIcons"
+            android:onClick="onFlashClick"
+            android:src="@drawable/flash_new_icon" />
+
+        <ImageView
+            android:id="@+id/imgFrontBackCamera"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/frameCaptureIcons"
+            android:onClick="onFrontBackCameraClick"
+            android:src="@drawable/front_back_camera" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/txtSetLineWidth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Set RoundedCorner Radius"
+        android:textColor="@color/colorgreen" />
+
+    <NumberPicker
+        android:id="@+id/numberpickerLineWidth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSetLineWidth"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/txtOkLineWidth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numberpickerLineWidth"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="20dp"
+        android:text="OK"
+        android:textColor="@color/colorgreen"
+        android:textSize="17sp" />
+</RelativeLayout>

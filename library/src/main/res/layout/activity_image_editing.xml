@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorblack">
+
+        <com.editing.canvas.library.util.CustomImageView
+            android:id="@+id/imgMainPlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@color/colorAccent" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/relBottomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:background="@color/top_bottom_header_color"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp">
+
+        <LinearLayout
+            android:id="@+id/linearMainToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/imgPencil"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_weight="0.20"
+                android:src="@drawable/pencil_large" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtSaveEditing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="#000000"
+        android:padding="4dp"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+</RelativeLayout>

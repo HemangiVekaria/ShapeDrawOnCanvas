@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="editing.canvas.com.imageeditingoncanvas.MainActivity1">
+
+    <include
+        android:id="@+id/topView"
+        layout="@layout/topview" />
+
+    <ImageView
+        android:id="@+id/imagePlaceholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/txtCaptureImage"
+        android:layout_below="@+id/topView" />
+
+    <TextView
+        android:id="@+id/txtCaptureImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtSelectImageFromGallery"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:text="Capture Image"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtSelectImageFromGallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:text="Select from Gallery"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp" />
+
+
+</RelativeLayout>

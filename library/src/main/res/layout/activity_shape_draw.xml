@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <!-- <ImageView
+         android:id="@+id/mainWholeViewShape"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:scaleType="fitXY"
+         android:src="@drawable/back2" />-->
+
+    <FrameLayout
+        android:id="@+id/wholeFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorblack">
+
+        <com.editing.canvas.library.util.CustomImageView
+            android:id="@+id/imgMainPlaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <com.editing.canvas.library.views.DrawingView
+            android:id="@+id/drawingViewAll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layoutShapeClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bottomLayoutAllSizeShapes"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/bottomLayoutAllSizeShapes"
+        android:background="@color/top_bottom_header_color"
+        android:gravity="center_vertical"
+
+        android:orientation="horizontal"
+        android:padding="6dp">
+
+        <ImageView
+            android:id="@+id/imgSelectionShape"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/pencil_large" />
+
+        <ImageView
+            android:id="@+id/imgDownArrow"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/down_arrow" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottomLayoutAllSizeShapes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/layoutShapeClick"
+        android:background="@color/top_bottom_header_color"
+        android:padding="6dp"
+        android:visibility="visible">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayoutpensils"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/imgShape1Pensil"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_weight="0.20"
+                android:onClick="setFreeShape1Pensil"
+                android:src="@drawable/select_icon_01_icon" />
+
+            <ImageView
+                android:id="@+id/imgShape2Pensil"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_weight="0.20"
+                android:onClick="setFreeShape2Pensil"
+                android:src="@drawable/unselect_icon_02_icon" />
+
+            <ImageView
+                android:id="@+id/imgShape3Pensil"
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:layout_weight="0.20"
+                android:onClick="setFreeShape3Pensil"
+                android:src="@drawable/unselect_icon_03_icon" />
+
+            <ImageView
+                android:id="@+id/imgShape4Pensil"
+                android:layout_width="match_parent"
+                android:layout_height="13dp"
+                android:layout_weight="0.20"
+                android:onClick="setFreeShape4Pensil"
+                android:src="@drawable/unselect_icon_04_icon" />
+
+            <ImageView
+                android:id="@+id/imgShape5Pensil"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_weight="0.20"
+                android:onClick="setFreeShape5Pensil"
+                android:src="@drawable/unselect_icon_05_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSquares"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_weight="0.20"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgShape1SquareWidth"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="setSquareWidthSize"
+
+                    android:src="@drawable/bordered_rectangle" />
+
+                <TextView
+                    android:id="@+id/txtShape1SquareWidth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="3"
+                    android:textColor="@color/colorblack" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_weight="0.20"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/imgShape2SquareCornerRad"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:onClick="setSquareCornerRadius"
+                    android:src="@drawable/rouded_ractangle" />
+
+                <TextView
+                    android:id="@+id/txtShape2SquareCornerRad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="3"
+                    android:textColor="@color/colorblack" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/imgShape3SquareAlign"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_weight="0.20"
+                android:onClick="setRectangleAlignment"
+                android:src="@drawable/center_align" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutLines"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_weight="0.20"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgShape1LineWidth"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:onClick="setWidthOfLine"
+                    android:src="@drawable/bordered_rectangle" />
+
+                <TextView
+                    android:id="@+id/txtShape1LineRadius"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="3"
+                    android:textColor="@color/colorblack" />
+            </FrameLayout>
+
+
+            <ImageView
+                android:id="@+id/imgShape2Line"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_weight="0.20"
+                android:onClick="setOnlySpecificAngleLine"
+                android:src="@drawable/line_constraints" />
+
+            <ImageView
+                android:id="@+id/imgShape3LineColor"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_weight="0.20"
+                android:onClick="openLineColorPicker"
+                android:src="@drawable/bordered_rectangle"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imgShape4LineConnector"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_weight="0.20"
+                android:onClick="setLineConnector"
+                android:src="@drawable/tools_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCircles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_weight="0.20"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgShape1CircleWidth"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="setCircleStrockWidth"
+                    android:src="@drawable/bordered_rectangle" />
+
+                <TextView
+                    android:id="@+id/txtShape1SCircleWidth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="3"
+                    android:textColor="@color/colorblack" />
+            </FrameLayout>
+
+
+            <ImageView
+                android:id="@+id/imgShape2CircleAlignment"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_weight="0.20"
+                android:onClick="setCircleAlignment"
+                android:src="@drawable/align_center_icon" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtUndo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Undo"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/txtClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtUndo"
+        android:onClick="onCloseDrawingClick"
+        android:padding="5dp"
+        android:text="Clear"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/txtClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:onClick="onCloseScreenClick"
+        android:padding="5dp"
+        android:text="Close"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/txtSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:text="Save"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+
+</RelativeLayout>

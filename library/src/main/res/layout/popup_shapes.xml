@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_element"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/imgSelectionCircle1"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/unselect_icon_01_icon"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/imgSelectionLine1"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:padding="1dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="4dp"
+        android:src="@drawable/line_img"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/imgSelectionSquare1"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:padding="1dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="4dp"
+        android:src="@drawable/plain_square"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/imgSelectionPensil1"
+        android:layout_width="28dp"
+        android:padding="1dp"
+        android:layout_height="28dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="4dp"
+        android:src="@drawable/pencil_large"
+        android:visibility="gone" />
+</LinearLayout>
